@@ -1,8 +1,8 @@
 services:
   db:
     image: mariadb:11
-    cpus: "0.50"
-    mem_limit: 512m
+    cpus: "0.25"
+    mem_limit: 256m
     environment:
       MARIADB_DATABASE: wordpress
       MARIADB_USER: wordpress
@@ -13,8 +13,8 @@ services:
 
   web:
     image: wordpress:latest
-    cpus: "0.50"
-    mem_limit: 512m
+    cpus: "0.25"
+    mem_limit: 256m
     depends_on:
       - db
     environment:
