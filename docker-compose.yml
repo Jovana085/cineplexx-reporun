@@ -11,7 +11,7 @@ services:
     volumes:
       - ./.stack-data/mysql:/var/lib/mysql
 
-   web:
+  web:
     image: wordpress:latest
     cpus: "0.25"
     mem_limit: 256m
