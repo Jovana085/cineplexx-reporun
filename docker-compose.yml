@@ -1,7 +1,8 @@
 services:
   db:
     image: mariadb:11
-    restart: unless-stopped
+    cpus: "0.50"
+    mem_limit: 512m
     environment:
       MARIADB_DATABASE: wordpress
       MARIADB_USER: wordpress
@@ -12,11 +13,10 @@ services:
 
   web:
     image: wordpress:latest
-    restart: unless-stopped
+    cpus: "0.50"
+    mem_limit: 512m
     depends_on:
       - db
-    ports:
-      - "8080:80"
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_NAME: wordpress
