@@ -25,3 +25,4 @@ services:
     volumes:
       - ./.stack-data/wordpress:/var/www/html
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
+      - ./cineplexx-page-gd-20261010-091812-wmwm2ryogei1.wpress:/var/www/html/wp-content/ai1wm-backups/backup.wpress:ro
